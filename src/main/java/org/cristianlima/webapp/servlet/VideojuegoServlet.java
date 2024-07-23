@@ -13,10 +13,6 @@ import org.cristianlima.webapp.model.Videojuego;
 
 import org.cristianlima.webapp.service.VideojuegoService;
 
-/**
- *
- * @author cristian
- */
 @WebServlet("/videojuego-servlet")
 @MultipartConfig
 public class VideojuegoServlet extends HttpServlet {
@@ -31,8 +27,9 @@ public class VideojuegoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Videojuego> videojuegos = vs.listarVideojuego();
+        System.out.println(videojuegos);
         req.setAttribute("videojuegos", videojuegos);
-        req.getRequestDispatcher("./videjuegos-lista.jsp").forward(req, resp);
+        req.getRequestDispatcher("./videojuegos/videojuegos-lista/videojuegos-lista.jsp").forward(req, resp);
     }
     
     @Override
