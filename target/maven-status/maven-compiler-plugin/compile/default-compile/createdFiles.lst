@@ -1,0 +1,5 @@
+org\cristianlima\webapp\service\IVideojuegoService.class
+org\cristianlima\webapp\model\Videojuego.class
+org\cristianlima\webapp\service\VideojuegoService.class
+org\cristianlima\webapp\servlet\VideojuegoServlet.class
+org\cristianlima\webapp\util\JPAUtil.class

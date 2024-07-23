@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence">
+    <persistence-unit name="BaseDeDatos" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <!--driver de Mysql-->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <!--Direccion de nuestra base de datos-->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/VideojuegosDB?serverTimezone=GMT-6"/>
+            <!--Usuario-->
+            <property name="jakarta.persistence.jdbc.user" value="cristianLima"/>
+            <!--Contraseña-->
+            <property name="jakarta.persistence.jdbc.password" value="1234"/>
+            
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hinernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
